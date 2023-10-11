@@ -12,7 +12,22 @@ on:
   workflow_dispatch:
 
 jobs:
+  test:
+    name: 🧪 Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install modules
+        run: yarn
+
+      - name: Launch tests
+        run: yarn test
+
   build:
+    name: 🛠️ Build
+    needs: test
     runs-on: ubuntu-latest
     steps:    
       - name: Checkout code
