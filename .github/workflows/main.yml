@@ -20,4 +20,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: JPreault/docker-getting-started:latest
+        tags: zerrax85/docker-getting-started:latest
